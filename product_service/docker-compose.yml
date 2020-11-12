@@ -18,13 +18,13 @@ services:
         - "./.docker/dbdata:/var/lib/mysql"
     environment:
         MYSQL_DATABASE: productapp
-        MYSQL_ROOT_PASSWORD: roo
+        MYSQL_ROOT_PASSWORD: root
   
   productapp-nginx:
     build: ./.docker/nginx
     restart: always
     ports:
-      - "8001:8001"
+      - "8001:80"
     volumes:
       - ./:/var/www
     depends_on:
