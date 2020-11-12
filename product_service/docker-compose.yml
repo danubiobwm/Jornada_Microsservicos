@@ -30,7 +30,6 @@ services:
     depends_on:
       - productapp
       
-  
   productapp-redis:
     image: redis:alpine
     expose:
